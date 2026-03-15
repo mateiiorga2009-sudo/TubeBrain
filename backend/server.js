@@ -177,6 +177,11 @@ Idea del video: "${idea}"
   }
 });
 
+// Si ninguna ruta de la API o autenticación coincide, devolver index.html
+app.get("*", (req, res) => {
+  res.sendFile(path.join(frontendPath, "index.html"));
+});
+
 app.listen(port, () => {
   console.log(`TubeBrain backend escuchando en http://localhost:${port}`);
 });
