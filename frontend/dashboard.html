@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TubeBrain Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="dashboard-body">
+    <div class="dashboard-layout">
+      <aside class="sidebar">
+        <div class="sidebar-logo">
+          <span class="logo-icon">TB</span>
+          <span class="logo-text">TubeBrain</span>
+        </div>
+        <nav class="sidebar-nav">
+          <button class="nav-item active" data-panel="titles-panel">
+            Generate Viral Titles
+          </button>
+          <button class="nav-item" data-panel="thumbnails-panel">
+            Generate Thumbnail Ideas
+          </button>
+          <button class="nav-item" data-panel="hook-panel">
+            Generate Hook
+          </button>
+          <button class="nav-item" data-panel="structure-panel">
+            Generate Video Structure
+          </button>
+        </nav>
+        <button id="logoutBtn" class="nav-logout">Logout</button>
+      </aside>
+
+      <main class="dashboard-main">
+        <header class="dashboard-header">
+          <div>
+            <h1 class="dashboard-title">Content Studio</h1>
+            <p class="dashboard-subtitle">
+              Usa la IA de TubeBrain para transformar tus ideas en conceptos
+              listos para YouTube.
+            </p>
+          </div>
+          <div class="user-info" id="userInfo">
+            <div class="user-avatar" id="userAvatar"></div>
+            <div class="user-meta">
+              <span id="userName" class="user-name"></span>
+              <span id="userEmail" class="user-email"></span>
+            </div>
+          </div>
+        </header>
+
+        <section id="notice" class="notice"></section>
+
+        <section class="panels">
+          <!-- TITLES -->
+          <div id="titles-panel" class="panel active">
+            <h2>Generate Viral Titles</h2>
+            <p class="panel-description">
+              Escribe una idea y obtén 10 posibles títulos virales para tu
+              próximo video.
+            </p>
+            <textarea
+              class="panel-input"
+              id="titlesIdea"
+              placeholder="Ejemplo: Cómo triplicar tus vistas en YouTube en 30 días..."
+            ></textarea>
+            <button class="btn btn-primary" id="titlesBtn">
+              Generate Viral Titles
+            </button>
+            <div class="loader" id="titlesLoader"></div>
+            <div class="panel-results">
+              <div class="results-header">
+                <h3>Results</h3>
+                <button class="btn btn-ghost" id="copyTitlesBtn">
+                  Copy all
+                </button>
+              </div>
+              <ol id="titlesResults" class="results-list"></ol>
+            </div>
+          </div>
+
+          <!-- THUMBNAILS -->
+          <div id="thumbnails-panel" class="panel">
+            <h2>Generate Thumbnail Ideas</h2>
+            <p class="panel-description">
+              Pide a TubeBrain composiciones claras de miniaturas que llamen la
+              atención.
+            </p>
+            <textarea
+              class="panel-input"
+              id="thumbnailsIdea"
+              placeholder="Ejemplo: Video sobre cómo ahorrar dinero siendo estudiante..."
+            ></textarea>
+            <button class="btn btn-primary" id="thumbnailsBtn">
+              Generate Thumbnail Ideas
+            </button>
+            <div class="loader" id="thumbnailsLoader"></div>
+            <div class="panel-results">
+              <div class="results-header">
+                <h3>Results</h3>
+                <button class="btn btn-ghost" id="copyThumbnailsBtn">
+                  Copy all
+                </button>
+              </div>
+              <ul id="thumbnailsResults" class="results-list"></ul>
+            </div>
+          </div>
+
+          <!-- HOOK -->
+          <div id="hook-panel" class="panel">
+            <h2>Generate Hook</h2>
+            <p class="panel-description">
+              Crea un gancho de 10 segundos que haga que la gente no pueda
+              dejar de ver tu video.
+            </p>
+            <textarea
+              class="panel-input"
+              id="hookIdea"
+              placeholder="Ejemplo: Video contando cómo dejé mi trabajo para ser creador a tiempo completo..."
+            ></textarea>
+            <button class="btn btn-primary" id="hookBtn">
+              Generate Hook
+            </button>
+            <div class="loader" id="hookLoader"></div>
+            <div class="panel-results">
+              <div class="results-header">
+                <h3>Result</h3>
+                <button class="btn btn-ghost" id="copyHookBtn">Copy</button>
+              </div>
+              <p id="hookResult" class="results-text"></p>
+            </div>
+          </div>
+
+          <!-- STRUCTURE -->
+          <div id="structure-panel" class="panel">
+            <h2>Generate Video Structure</h2>
+            <p class="panel-description">
+              Define una estructura clara para grabar tu contenido sin perder
+              el hilo.
+            </p>
+            <textarea
+              class="panel-input"
+              id="structureIdea"
+              placeholder="Ejemplo: Tutorial paso a paso para empezar en YouTube desde cero..."
+            ></textarea>
+            <button class="btn btn-primary" id="structureBtn">
+              Generate Video Structure
+            </button>
+            <div class="loader" id="structureLoader"></div>
+            <div class="panel-results">
+              <div class="results-header">
+                <h3>Results</h3>
+                <button class="btn btn-ghost" id="copyStructureBtn">
+                  Copy all
+                </button>
+              </div>
+              <ol id="structureResults" class="results-list"></ol>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+  </body>
+  </html>
+

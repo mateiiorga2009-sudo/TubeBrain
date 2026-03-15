@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TubeBrain - AI for Viral YouTube Videos</title>
+    <meta
+      name="description"
+      content="TubeBrain helps you create viral YouTube titles, thumbnails, hooks, and scripts with AI."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <!-- NAVBAR -->
+      <nav class="navbar">
+        <div class="container navbar-inner">
+          <div class="logo">
+            <span class="logo-icon">TB</span>
+            <span class="logo-text">TubeBrain</span>
+          </div>
+          <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How it works</a>
+            <a href="#pricing">Pricing</a>
+          </div>
+          <button class="btn btn-small btn-outline" id="navStartBtn">
+            Start Free
+          </button>
+        </div>
+      </nav>
+
+      <main>
+        <!-- HERO -->
+        <section class="hero" id="top">
+          <div class="container hero-grid">
+            <div class="hero-text">
+              <h1>
+                Create Viral YouTube Videos
+                <span class="gradient-text">with TubeBrain</span>
+              </h1>
+              <p class="hero-subtitle">
+                Generate titles, thumbnails, hooks, and video structures in
+                seconds using AI — so you can focus on creating, not guessing.
+              </p>
+              <div class="hero-cta">
+                <button class="btn btn-large" id="heroStartBtn">
+                  Start Free
+                </button>
+                <span class="hero-note">No credit card required</span>
+              </div>
+              <div class="hero-badges">
+                <span>🎬 For creators & agencies</span>
+                <span>⚡ Results in seconds</span>
+                <span>🤖 Powered by AI</span>
+              </div>
+            </div>
+
+            <div class="hero-card">
+              <h2>Instant YouTube concept</h2>
+              <p class="hero-card-caption">
+                Escribe una idea y mira cómo TubeBrain la convierte en un video.
+              </p>
+
+              <section class="input-section" id="generator">
+                <label for="idea">Idea del video</label>
+                <textarea
+                  id="idea"
+                  placeholder="Ejemplo: Cómo pasé de 0 a 100k suscriptores en un año..."
+                ></textarea>
+                <button id="generateBtn" class="btn btn-full">
+                  Generar contenido
+                </button>
+                <p class="note">
+                  El backend debe estar corriendo en
+                  <code>http://localhost:3000</code>.
+                </p>
+              </section>
+
+              <section id="results" class="results hidden">
+                <div class="result-block">
+                  <h3>10 títulos virales</h3>
+                  <ol id="titlesList"></ol>
+                </div>
+
+                <div class="result-block">
+                  <h3>3 ideas de miniatura</h3>
+                  <ul id="thumbnailsList"></ul>
+                </div>
+
+                <div class="result-block">
+                  <h3>Gancho de 10 segundos</h3>
+                  <p id="hookText"></p>
+                </div>
+
+                <div class="result-block">
+                  <h3>Estructura simple del video</h3>
+                  <ol id="structureList"></ol>
+                </div>
+              </section>
+
+              <section id="status" class="status"></section>
+            </div>
+          </div>
+        </section>
+
+        <!-- FEATURES -->
+        <section class="section" id="features">
+          <div class="container">
+            <h2 class="section-title">Everything you need for your next hit</h2>
+            <p class="section-subtitle">
+              TubeBrain transforma una simple idea en un concepto listo para
+              publicar en YouTube.
+            </p>
+
+            <div class="features-grid">
+              <article class="feature-card">
+                <h3>Viral Title Generator</h3>
+                <p>
+                  Genera 10 títulos optimizados para clics y CTR en segundos,
+                  listos para probar en tus próximos videos.
+                </p>
+              </article>
+
+              <article class="feature-card">
+                <h3>Thumbnail Idea Generator</h3>
+                <p>
+                  Recibe 3 conceptos claros de miniatura con composiciones,
+                  textos y emociones para destacar en el feed.
+                </p>
+              </article>
+
+              <article class="feature-card">
+                <h3>Hook Generator</h3>
+                <p>
+                  Crea un gancho de 10 segundos que retenga a tu audiencia desde
+                  el segundo 1.
+                </p>
+              </article>
+
+              <article class="feature-card">
+                <h3>Video Structure Generator</h3>
+                <p>
+                  Obtén una estructura simple pero efectiva para organizar tu
+                  contenido sin perder el ritmo.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- HOW IT WORKS -->
+        <section class="section section-alt" id="how-it-works">
+          <div class="container">
+            <h2 class="section-title">How TubeBrain works</h2>
+            <p class="section-subtitle">
+              De la idea al concepto viral en tres pasos simples.
+            </p>
+
+            <div class="steps-grid">
+              <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Write your video idea</h3>
+                <p>
+                  Describe tu video en lenguaje natural. Puede ser tan corto o
+                  tan detallado como quieras.
+                </p>
+              </div>
+
+              <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>TubeBrain generates everything</h3>
+                <p>
+                  En segundos obtienes títulos, ideas de miniatura, hooks y
+                  estructura de video generados por IA.
+                </p>
+              </div>
+
+              <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Publish your viral video</h3>
+                <p>
+                  Usa el contenido generado para grabar, editar y publicar
+                  videos listos para despegar.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- PRICING -->
+        <section class="section" id="pricing">
+          <div class="container">
+            <h2 class="section-title">Simple pricing for serious creators</h2>
+            <p class="section-subtitle">
+              Empieza gratis, actualiza cuando TubeBrain se convierta en tu
+              herramienta diaria.
+            </p>
+
+            <div class="pricing-grid">
+              <article class="pricing-card">
+                <h3>Free</h3>
+                <p class="price">$0</p>
+                <p class="price-caption">Perfecto para probar TubeBrain.</p>
+                <ul class="pricing-list">
+                  <li>Hasta 10 ideas al día</li>
+                  <li>Generador de títulos virales</li>
+                  <li>Ideas básicas de miniatura</li>
+                  <li>Hooks y estructura estándar</li>
+                </ul>
+                <button class="btn btn-full btn-secondary" id="freePlanBtn">
+                  Start Free
+                </button>
+              </article>
+
+              <article class="pricing-card pricing-card-featured">
+                <div class="badge">Most Popular</div>
+                <h3>Pro</h3>
+                <p class="price">$19<span>/mes</span></p>
+                <p class="price-caption">
+                  Para creadores y agencias que publican constantemente.
+                </p>
+                <ul class="pricing-list">
+                  <li>Ideas ilimitadas</li>
+                  <li>Títulos avanzados con enfoque en CTR</li>
+                  <li>Conceptos de miniatura detallados</li>
+                  <li>Hooks personalizados por nicho</li>
+                  <li>Estructuras optimizadas por formato (shorts, long-form)</li>
+                </ul>
+                <button class="btn btn-full" id="proPlanBtn">
+                  Start Free
+                </button>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="container footer-inner">
+          <div class="footer-left">
+            <span class="logo-text">TubeBrain</span>
+            <span class="footer-meta">© <span id="year"></span> TubeBrain. All rights reserved.</span>
+          </div>
+          <div class="footer-links">
+            <span>Made for YouTube creators.</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
+
+
